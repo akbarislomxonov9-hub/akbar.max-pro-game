@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PRO GAME HUB - MAX PRO</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <h1>🎮 PRO GAME HUB</h1>
+      <button id="theme-toggle" class="theme-btn">☀️ Tongi rejim</button>
+      <nav>
+        <button class="game-btn active" data-game="snake">🐍 Snake</button>
+        <button class="game-btn" data-game="tictactoe">⭕ Tic-Tac-Toe</button>
+        <button class="game-btn" data-game="pong">🏓 Pong</button>
+        <button class="game-btn" data-game="breakout">🧱 Breakout</button>
+        <button class="game-btn" data-game="2048">🔢 2048</button>
+      </nav>
+      <div class="stats">
+        <p>Umumiy: <span id="total-score">0</span></p>
+        <p>Rekord: <span id="high-score">0</span></p>
+      </div>
+    </aside>
+
+    <main class="game-area">
+      <div id="snake" class="game active">
+        <h2>🐍 SNAKE</h2>
+        <canvas id="snake-canvas" width="640" height="640"></canvas>
+        <div class="controls">
+          <button id="snake-start">▶ Boshlash / Pause</button>
+          <button id="snake-restart">🔄 Qayta</button>
+          <span>Ball: <span id="snake-score">0</span></span>
+          <div class="difficulty-controls">
+            <button id="easy">🟢 Oson</button>
+            <button id="normal">🟡 Normal</button>
+            <button id="hard">🔴 Hard</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="tictactoe" class="game">
+        <h2>⭕ TIC-TAC-TOE ❌</h2>
+        <div id="board" class="board"></div>
+        <div class="controls">
+          <button id="ttt-reset">🔄 Qayta o'ynash</button>
+        </div>
+      </div>
+
+      <div id="pong" class="game">
+        <h2>🏓 PONG</h2>
+        <canvas id="pong-canvas" width="800" height="500"></canvas>
+        <div class="controls">
+          <button id="pong-start">▶ Boshlash / Pause</button>
+          <button id="pong-restart">🔄 Qayta</button>
+          <div class="difficulty-controls">
+            <button id="pong-easy">🟢 Oson</button>
+            <button id="pong-normal" class="active-diff">🟡 Normal</button>
+            <button id="pong-hard">🔴 Qiyin</button>
+          </div>
+          <span>Siz: <span id="player-score">0</span> | AI: <span id="ai-score">0</span></span>
+        </div>
+      </div>
+
+      <div id="breakout" class="game">
+        <h2>🧱 BREAKOUT</h2>
+        <canvas id="breakout-canvas" width="700" height="500"></canvas>
+        <div class="controls">
+          <button id="breakout-start">▶ Boshlash</button>
+          <button id="breakout-restart">🔄 Qayta</button>
+          <div class="difficulty-controls">
+            <button id="breakout-easy">🟢 Oson</button>
+            <button id="breakout-normal" class="active-diff">🟡 Normal</button>
+            <button id="breakout-hard">🔴 Qiyin</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="2048" class="game">
+        <h2>🔢 2048</h2>
+        <div id="grid" class="grid"></div>
+        <div class="controls">
+          <button id="reset2048">🔄 Qayta boshlash</button>
+          <span>Ball: <span id="2048-score">0</span></span>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
